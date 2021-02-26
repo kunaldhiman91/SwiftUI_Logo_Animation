@@ -14,11 +14,10 @@ extension UIBezierPath {
         for path in paths {
             completePath.append(path)
         }
-        
         return completePath.bounds
     }
     
-    static var path4: UIBezierPath {
+    static var brandPath: UIBezierPath {
         let shape = UIBezierPath()
         shape.move(to: CGPoint(x: 161.78, y: 53.82))
         shape.addCurve(to: CGPoint(x: 101.36, y: 166.32), controlPoint1: CGPoint(x: 113.77, y: 70.25), controlPoint2: CGPoint(x: 88.72, y: 116.9))
