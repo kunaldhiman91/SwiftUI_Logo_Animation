@@ -12,7 +12,8 @@ struct LogoAnimationApp: App {
     @ObservedObject private var color = BrandColor()
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(color)
+            NavigatingView()
+            //ContentView().environmentObject(color)
         }
     }
 }

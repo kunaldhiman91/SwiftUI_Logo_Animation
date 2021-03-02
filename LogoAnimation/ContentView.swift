@@ -28,17 +28,15 @@ struct ContentView: View {
     @State var rotateX: Double = 0
     @State var finished = false
     
-    let shapeBounds = UIBezierPath.generateBoundsFromPaths(paths: [.brandPath])
-    
     var body: some View {
         Color.red
             .overlay(
                 ZStack {
-                    BrandShapeView(path: .brandPath, pathBounds: shapeBounds)
+                    BrandShape(percentage: 0)
                         .trim(from: 0.0, to: endAmount)
                         .stroke(Color.white, lineWidth: 8.0)
                     
-                    BrandShapeView(path: .brandPath, pathBounds: shapeBounds)
+                    BrandShape(percentage: 0)
                         .trim(from: 0.0, to: endAmount)
                         .fill(Color.white).opacity(finished ? 1 : 0)
                     
